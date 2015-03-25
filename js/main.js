@@ -9,9 +9,9 @@ $(".icheck-text input[type=checkbox]").switchButton({
 });
 $(".icheck input[type=checkbox]").switchButton({
     show_labels: false,
-    width: 40,
-    height: 17,
-    button_width: 20
+    width: 36,
+    height: 15,
+    button_width: 18
 });
 // sidebar collapse
 $('.btn-sidebar-collapse').click(function (e) {
@@ -26,7 +26,7 @@ $('.btn-sidebar-collapse').click(function (e) {
         $(".sidebar").mCustomScrollbar();
     });
 })(jQuery);
-
+//resize funtion
 $(document).ready(function () {
     $(window).resize(function () {
         if ($(window).width() <= 950) {
@@ -37,3 +37,5 @@ $(document).ready(function () {
         }
     });
 });
+//tooltip
+$('[data-toggle="tooltip"]').tooltip();
