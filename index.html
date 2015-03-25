@@ -18,8 +18,9 @@
         <!-- Custom styles for this template -->
         <link href="css/dashboard.css" rel="stylesheet">
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
-        <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-        <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+        <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+        <link rel="stylesheet" href="css/jquery.fileupload.css">
         <script src="js/ie-emulation-modes-warning.js"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,7 +44,7 @@
                     </button>
                     <a class="navbar-brand" href="index.html"><i class="fa fa-paper-plane-o fa-lg"></i> Administrator</a>
                     <ul class="nav navbar-nav hidden-xs">
-                        <li class="anhnm"><a href="#"><i class="fa fa-dedent fa-lg"></i></a></li>
+                        <li class="btn-sidebar-collapse"><a href="#"><i class="fa fa-dedent fa-lg"></i></a></li>
                     </ul>
 
                     <p class="navbar-text hidden-xs">Hệ thống quản lý kho hàng</p>
@@ -145,29 +146,27 @@
 
         </div>
 
-        <!-- Bootstrap core JavaScript
+       <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
         <script src="js/bootstrap.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+        <script src="js/vendor/jquery.ui.widget.js"></script>
+        <!-- The basic File Upload plugin -->
+        <script src="js/jquery.fileupload.js"></script>
         <script src="js/jquery.switchButton.js"></script>
         <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/main.js"></script>
+
+
         <script>
-            $('.anhnm').click(function(e) {
-                $('.main-content').toggleClass('sidebar-collapse');
-                 e.stopPropagation();
-            });
-//            $(".anhnm").click(function() {
-//                $(".main-content").addClass("sidebar-collapse");
-//            });
-            (function($) {
-                $(window).load(function() {
-                    $(".sidebar").mCustomScrollbar();
-                });
-            })(jQuery);
+            
+        </script>
+        <script>
+            
         </script>
     </body>
 </html>

@@ -277,10 +277,10 @@ body {
         overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
         background-color: #323641;
         border-right: 1px solid #eee;
-/*        -webkit-transition: all .3s ease-in-out;
-        -moz-transition: all .3s ease-in-out;
-        -o-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;*/
+        /*        -webkit-transition: all .3s ease-in-out;
+                -moz-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;*/
     }
     .sidebar ul li {
         float: none;
@@ -320,11 +320,11 @@ body {
     font-size: 15px;
     font-weight: bold;
     color: #9b9ba3;
-/*    -webkit-transition: background-color 500ms ease;
-    -moz-transition: background-color 500ms ease;
-    -ms-transition: background-color 500ms ease;
-    -o-transition: background-color 500ms ease;
-    transition: background-color 500ms ease;*/
+    /*    -webkit-transition: background-color 500ms ease;
+        -moz-transition: background-color 500ms ease;
+        -ms-transition: background-color 500ms ease;
+        -o-transition: background-color 500ms ease;
+        transition: background-color 500ms ease;*/
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
@@ -343,7 +343,7 @@ body {
  * Main content
  */
 .anhnm {
-    
+
 }
 .main {
     padding: 20px;
@@ -721,4 +721,19 @@ ul.messages_layout .dropdown-menu  li{ width:100%;}
 [data-toggle="tooltip"] {
     cursor: help;
     color: #9d9d9d;
+}
+.dropzone {
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: #fff;
+    padding: 20px;
+}
+.dropzone:hover {
+    border: 2px dashed #0072d0;
+    border-radius: 5px;
+    background: #fafafa;
+    padding: 20px;
+}
+.dropzone .progress {
+    height: 10px;
 }
