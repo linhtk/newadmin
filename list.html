@@ -136,10 +136,10 @@
                         </form>  
                     </div>
                     <!--End search-->
-<!--                    <div class="alert alert-info alert-dismissible" role="alert">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <i class="fa fa-smile-o fa-lg"></i> Cập nhật thành công
-                    </div>-->
+                    <!--                    <div class="alert alert-info alert-dismissible" role="alert">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <i class="fa fa-smile-o fa-lg"></i> Cập nhật thành công
+                                        </div>-->
                     <div class="table-responsive ">
                         <table class="table table-striped table-hover">
                             <thead>
@@ -308,11 +308,18 @@
         <script>
             $('.anhnm').click(function(e) {
                 $('.main-content').toggleClass('sidebar-collapse');
-                 e.stopPropagation();
+                e.stopPropagation();
             });
 //            $(".anhnm").click(function() {
 //                $(".main-content").addClass("sidebar-collapse");
 //            });
+            //checkbox
+            $(".icheck input").switchButton({
+                show_labels: false,
+                width: 40,
+                height: 17,
+                button_width: 20
+            });
             (function($) {
                 $(window).load(function() {
                     $(".sidebar").mCustomScrollbar();
