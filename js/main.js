@@ -44,9 +44,9 @@ $(function() {
                 }));
                 
 //                $('<p>').text(file.name).appendTo('#files');
-                $('<p><i class="fa fa-picture-o"></i> ' + file.name + '</p>').appendTo('#files');
+                $('<img src="' + file.thumbnailUrl  +'" class="img-thumbnail">').appendTo('#files');
 
-                $('<p class="error">').text(file.error).appendTo('#files');
+//                $('<p class="error">').text(file.error).appendTo('#files');
 
 
             });

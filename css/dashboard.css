@@ -741,3 +741,9 @@ ul.messages_layout .dropdown-menu  li{ width:100%;}
     padding: 0;
     color: #ff482e;
 }
+
+#files img {
+    float: left;
+    max-height: 80px;
+    margin-right: 10px;
+}
