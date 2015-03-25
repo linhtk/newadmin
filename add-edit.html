@@ -107,73 +107,126 @@
                     </div>
                 </div>
                 <div class="main">
-                    <h2 class="page-header"><i class="fa fa-plus-square"></i> Thêm mới cập nhật
-                    </h2>
+                    <h3 class="page-header"><i class="fa fa-plus-square"></i> Thêm mới cập nhật
+                    </h3>
 
                     <!--End search-->
                     <!--                    <div class="alert alert-info alert-dismissible" role="alert">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             <i class="fa fa-smile-o fa-lg"></i> Cập nhật thành công
                                         </div>-->
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label for="nameProduct" class="col-sm-2 control-label">Tên sản phẩm</label>
-                            <div class="col-sm-10">
-                                <input autofocus="" type="text" class="form-control" id="nameProduct" placeholder="Tên sản phẩm">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="categorie" class="col-sm-2 control-label">Danh mục</label>
-                            <div class="col-sm-10">
-                                <select class="form-control">
-                                    <option>----- Chọn danh mục -----</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="nameProduct" class="col-sm-2 control-label">Ảnh sản phẩm</label>
-                            <div class="col-sm-10">
-                                <div class="dropzone">
-                                    <div class="text-center fileinput-button">
-                                        <!-- The fileinput-button span is used to style the file input field as button -->
-                                        <i class="fa fa-picture-o fa-3x"></i>
-                                        <span></span>
-                                        <!-- The file input field used as target for the file upload widget -->
-                                        <input id="fileupload" type="file" name="files[]" multiple>
-                                        <p>Click vào để chọn file ảnh... <br>Hoặc kéo ảnh vào đây</p>
-                                    </div>
-                                    <div id="filePath"></div>
-                                    <!-- The global progress bar -->
-                                    <div id="progress" class="progress">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped"></div>
-                                    </div>
-                                    <!-- The container for the uploaded files -->
-                                    <div id="files" class="files">
-                                        
-                                        
-                                    </div>
-                                    <div class="clearfix"></div>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-9 col-md-8 col-sm-8">
+                                <div class="form-group">
+                                    <input autofocus="" type="text" class="form-control" id="nameProduct" placeholder="Nhập tên sản phẩm">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="priceProduct" class="col-sm-2 control-label">Giá sản phẩm</label>
-                            <div class="col-sm-10">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="priceProduct" placeholder="Giá sản phẩm">
-                                        <div class="input-group-addon">VND</div>
+                                <div class="form-group">
+                                    <label for="descProduct" class="control-label">Mô tả</label>
+                                    <textarea class="form-control" rows="12" id="descProduct"></textarea>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="form-group">
+                                    <label for="pictureProduct" class="control-label">Ảnh sản phẩm</label>
 
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success">Thêm mới / Cập nhật</button>
-                                <button type="reset" class="btn btn-default">Hủy</button>
+                                    <div class="dropzone">
+                                        <div class="text-center fileinput-button">
+                                            <!-- The fileinput-button span is used to style the file input field as button -->
+                                            <i class="fa fa-picture-o fa-3x"></i>
+                                            <span></span>
+                                            <!-- The file input field used as target for the file upload widget -->
+                                            <input id="fileupload" type="file" name="files[]" multiple>
+                                            <p>Click vào để chọn file ảnh... <br>Hoặc kéo ảnh vào đây</p>
+                                        </div>
+                                        <div id="filePath"></div>
+                                        <!-- The global progress bar -->
+                                        <div id="progress" class="progress">
+                                            <div class="progress-bar progress-bar-success progress-bar-striped"></div>
+                                        </div>
+                                        <!-- The container for the uploaded files -->
+                                        <div id="files" class="files">
+
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <!--End upload-->
+
+                            </div>
+                            <!--End col Left-->
+                            <div class="col-lg-3 col-md-4 col-sm-4">
+
+                                <div class="panel panel-default add-form-panel">
+                                    <div class="panel-heading">Giá sản phẩm</div>
+                                    <div class="panel-body">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="priceProduct" placeholder="Giá sản phẩm">
+                                            <div class="input-group-addon">VND</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End panel-->
+                                <div class="panel panel-default add-form-panel">
+                                    <div class="panel-heading">Chọn danh mục</div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <select class="form-control">
+                                                <option>----- Chọn danh mục -----</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End panel-->
+                                <div class="panel panel-default panel-list">
+                                    <div class="panel-heading">Tùy chọn sản phẩm</div>
+                                    <div class="panel-body">
+                                        <div class="form-group clearfix">
+                                            <div class="pull-left">Trạng thái hiển thị</div>
+                                            <div class="icheck">
+                                                <input type="checkbox" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <div class="pull-left">Hết hàng</div>
+                                            <div class="icheck">
+                                                <input type="checkbox" value="1">
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <div class="pull-left">Sản phẩm tiêu biểu</div>
+                                            <div class="icheck">
+                                                <input type="checkbox" value="1" checked="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group clearfix">
+                                            <div class="pull-left">Sản phẩm bán chạy</div>
+                                            <div class="icheck">
+                                                <input type="checkbox" value="1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End panel-->
+                                <div class="panel panel-default add-form-panel">
+                                    <div class="panel-heading">Vị trí hiển thị</div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="positionProduct" placeholder="Vị trí hiển thị">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End col right-->
+                            <div class="col-md-12">
+                                <hr>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-success">Thêm mới / Cập nhật</button>
+                                    <button type="reset" class="btn btn-default">Hủy</button>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -186,24 +239,17 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery.1.11.2.min.js"></script>
         <!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+        <script src="js/vendor/jquery-ui.1.11.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/vendor/jquery.ui.widget.js"></script>
         <!-- The basic File Upload plugin -->
         <script src="js/jquery.fileupload.js"></script>
         <script src="js/jquery.switchButton.js"></script>
-        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/jquery.Scrollbar.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/upload.js"></script>
         <script src="js/main.js"></script>
-
-
-        <script>
-
-        </script>
-        <script>
-
-        </script>
     </body>
 </html>
