@@ -737,3 +737,7 @@ ul.messages_layout .dropdown-menu  li{ width:100%;}
 .dropzone .progress {
     height: 10px;
 }
+.dropzone .error {
+    padding: 0;
+    color: #ff482e;
+}

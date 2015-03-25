@@ -26,20 +26,37 @@ $(document).bind('drop', function(e) {
 $(function() {
     'use strict';
     // Change this to the location of your server-side upload handler:
-    var url = 'server/php/';
+    var url = 'include/upload/';
     $('#fileupload').fileupload({
+        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+        autoUpload: true,
+        maxNumberOfFiles: 5,
         url: url,
         dataType: 'json',
+        
         done: function(e, data) {
+            console.log(data.result.files);
             $.each(data.result.files, function(index, file) {
                 $('#filePath').append($('<input>').attr({
                     type: 'hidden',
                     name: 'filePath',
                     value: file.url
                 }));
-                $('<p>').text(file.name).appendTo('#files');
+                
+//                $('<p>').text(file.name).appendTo('#files');
+                $('<p><i class="fa fa-picture-o"></i> ' + file.name + '</p>').appendTo('#files');
+
+                $('<p class="error">').text(file.error).appendTo('#files');
+
+
             });
         },
+//        fail: function (e, data) {
+//            $.each(data.messages, function (index, error) {
+//                $('<p style="color: red;">Upload file error: ' + error + '<i class="elusive-remove" style="padding-left:10px;"/></p>')
+//                .appendTo('#files');
+//            });
+//        },
         progressall: function(e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
             $('#progress .progress-bar').css(
